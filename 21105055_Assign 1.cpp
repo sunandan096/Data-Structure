@@ -4,7 +4,7 @@
  using namespace std;   
  using namespace std;
 
- //creating the node class
+ //Node class created
  class Node{
      public:
      //Creating class objects
