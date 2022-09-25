@@ -16,12 +16,12 @@ class Node{
     }
 };
 
-//Function to insert a node at the end of linked list
+//Function to insert a node at the end of linked list.
 void append(Node*&head,int data){
     Node*temp=head;
     Node*new_node=new Node(data);
     if(temp==NULL){head=new_node;new_node->next=head;return;}
-    while(temp->next!=head){temp=temp->next;} //This condition establishes that the traversing element(temp) has reached the first element
+    while(temp->next!=head){temp=temp->next;} //This condition makes sure that the traversing element(temp) has reached the first element.
     temp->next=new_node;
     new_node->next=head;
 }
@@ -31,7 +31,7 @@ void pfun(Node*&head){
     do{cout<<temp->data<<"->";temp=temp->next;}
     while(temp!=head);
 }
-//*****************************************************************************
+//************************
 int main(){
     Node*head=NULL;
     append(head,1);
