@@ -8,15 +8,15 @@
  class Node{
      public:
      //Creating class objects
- // creating the node class
+ // creating node class
  class Node
  {
  public:
      // Creating class objects
      string name;
      int age;
-     Node*next; //A node pointer for next node
-     Node*prev; //A node pointer for previous node
+     Node*next; //This is a node pointer for next node
+     Node*prev; //This is a node pointer for previous node
      //calling constructor
      Node(string name,int age){
          this->name=name;
@@ -37,9 +37,9 @@
 
 
  void append(Node* &head,string name,int age){
-     //Creating a node pointer and storing address of head in temp
+     //Creating a node pointer and storing the address of head in "temp"
      Node*temp=head;
-     //creating a new node and storing name and age in it
+     //creating a new node and storing name and age in the new node
      Node*new_node=new Node(name,age);
      //Inserting node in empty list
      if(temp==NULL){
@@ -147,7 +147,7 @@
      }
  }
 
- //FUNCTION TO DELETE LAST ELEMENT
+ //Function to delete the last element 
  void pop(Node*&head){
      Node*temp=head;
      while(temp->next!=NULL){temp=temp->next;}
@@ -168,7 +168,7 @@
      //Initialising an empty linked list
      Node*head=NULL;
  	int no_of_family_mem;
-     //Taking no of family mem as input
+     //Taking no of family members as input
  	cout<<"Enter Number Of Family Members:";cin>>no_of_family_mem;
      //Inserting family members details in doubly linked list
  	for(int i=1;i<=no_of_family_mem;i++){
@@ -180,7 +180,7 @@
  		append(head,name,age);
  	}
      cout<<endl;
-     //Displaying Family details
+     //Showing Family details
      cout<<"Doubly Linked list with my family members as elements is shown below:"<<endl;
      cout<<endl;
      display_from_start(head);
